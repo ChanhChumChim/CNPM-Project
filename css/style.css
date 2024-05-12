@@ -103,6 +103,7 @@ footer .wrapper .box .icons a{
 	display: grid;
 	border-radius: 5px;
 	place-items: center;
+	text-decoration: none;
 }
 
 footer .wrapper .box .icons a i{
@@ -126,6 +127,7 @@ footer .wrapper .contact li{
 	display: grid;
 	grid-template-columns: 30px 1fr;
 	margin-bottom: 16px;
+	p ;
 }
 
 footer .wrapper .contact li span{
