@@ -1,83 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/png" href="../images/favicon.png">
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-		<title>E-Cart | Sàn thương mại điện tử số 1 VI </title>
-	</head>
 
-	<body>
-		<header>
-			<nav class="navbar">
-				<ul>
-					<li class="Logo"><a href="index.html"><img src="../images/favicon.png" alt="logo"></a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="product.html">Products</a></li>
-					<li><a href="cart.html">Your Cart</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-					<li><a href="sign.html">Sign In</a></li>
-				</ul>
-			</nav>
-		</header>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-		<main>
-			
-		</main>
+	<title>E-Cart | Sàn thương mại điện tử số 1 VI </title>
+</head>
 
-		<footer>
-			<div class="wrapper">
-				<div class="box info">
-					<h2 class="title">E-cart</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Consectetur dicta unde consequuntur maxime nobis officia nam earum, soluta a consequatur voluptate accusamus sapiente enim reprehenderit laboriosam, dolore veniam nulla. Illum.</p>
-					<ul class="icons">
-						<li>
-							<a href="#"><i class="fab fa-github"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-x-twitter"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-						</li>
-					</ul>
+<body>
+	<header>
+		<nav class="navbar">
+			<ul>
+				<li class="Logo"><a href="index.html"><img src="../images/favicon.png" alt="logo"></a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="product.html">Products</a></li>
+				<li><a href="cart.html">Your Cart</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="sign.html">Sign In</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div class="container mt-5 p-3 rounded cart">
+			<div class="row no-gutters">
+				<div class="col-md-8">
+					<div class="product-details mr-2">
+						<div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i>
+
+							<li><a href="product.html">Continue Shopping</a></li>
+						</div>
+						<hr>
+						<h6 class="mb-0" style="color: #000000;">Shopping cart</h6>
+						<div class="d-flex justify-content-between"><span>You have 4 items in your cart</span>
+							<div class="d-flex flex-row align-items-center">
+								<div class="price ml-2">
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+							<div class="d-flex flex-row"><img class="rounded" src="/images/ip15.jpg" width="40">
+								<div class="ml-2"><span class="font-weight-bold d-block">Iphone 15 Pro Max</span><span
+										class="spec">256GB, Navy Blue</span></div>
+							</div>
+							<div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span
+									class="d-block ml-5 font-weight-bold">$900</span><button
+									style="border: 0; background-color: #e0e0e0; margin-left: 10px;"><i
+										class="fa fa-trash-o"></i></button>
+							</div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+							<div class="d-flex flex-row"><img class="rounded" src="/images/ip15.jpg" width="40">
+								<div class="ml-2"><span class="font-weight-bold d-block">One pro 7T</span><span
+										class="spec">256GB, Navy Blue</span></div>
+							</div>
+							<div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span
+									class="d-block ml-5 font-weight-bold">$900</span><button
+									style="border: 0; background-color: #e0e0e0; margin-left: 10px;"><i
+										class="fa fa-trash-o"></i></button></div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+							<div class="d-flex flex-row"><img class="rounded" src="/images/ip15.jpg" width="40">
+								<div class="ml-2"><span class="font-weight-bold d-block">Google pixel 4 XL</span><span
+										class="spec">256GB, Axe black</span></div>
+							</div>
+							<div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span
+									class="d-block ml-5 font-weight-bold">$800</span><i
+									class="fa fa-trash-o ml-3 text-black-50"></i></div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+							<div class="d-flex flex-row"><img class="rounded" src="/images/ip15.jpg" width="40">
+								<div class="ml-2"><span class="font-weight-bold d-block">Samsung galaxy Note
+										10&nbsp;</span><span class="spec">256GB, Navy Blue</span></div>
+							</div>
+							<div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span
+									class="d-block ml-5 font-weight-bold">$999</span><i
+									class="fa fa-trash-o ml-3 text-black-50"></i></div>
+						</div>
+					</div>
 				</div>
-				<div class="box links">
-					<h2>Company</h2>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Our Teams</a></li>
-					<li><a href="#">Jobs</a></li>
-					<li><a href="#">Career</a></li>
-				</div>
-				<div class="box links">
-					<h2>Quick Links</h2>
-					<li><a href="#">Terms of Use</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Refund Policy</a></li>
-					<li><a href="#">Cookies Policy</a></li>
-				</div>
-				<div class="box contact">
-					<h2>Contact Us</h2>
-					<ul>
-						<li>
-							<span><i class="fas fa-phone"></i></span>
-							<p><a href="#">+0123456789</a></p>
-						</li>
-						<li>
-							<span><i class="fas fa-envelope"></i></span>
-							<p><a href="#">developmentteam@ecart.com</a></p>
-						</li>
-					</ul>
-				</div>
-				<div class="copyright">
-					Copyright &copy; E-cart. All Right Reserved.
+				<div class="col-md-4">
+					<div class="payment-info">
+						<div class="cute porn">
+							<h3>Cuppon:</h3>
+							<textarea rows="1" cols="40"
+								style="border-radius: 10px; background-color: #eeeeee;">abc</textarea>
+						</div>
+						<div class="d-flex justify-content-between information">
+							<span>Subtotal</span><span>$3000.00</span>
+						</div>
+						<div class="d-flex justify-content-between information"><span>Shipping</span><span>$20.00</span>
+						</div>
+						<div class="d-flex justify-content-between information"><span>Total(Incl.
+								taxes)</span><span>$3020.00</span></div><button
+							class="btn btn-primary btn-block d-flex justify-content-between mt-3" type="button"
+							href="payment.html"><span>$3020.00</span>
+							<li><a><span>Checkout</a></li><i class="fa fa-long-arrow-right ml-1"></i></span>
+						</button>
+					</div>
 				</div>
 			</div>
-		</footer>
-	</body> 
+		</div>
+		<hr>
+	</main>
+
+	<footer>
+		<div class="wrapper">
+			<div class="box info">
+				<h2 class="title">E-cart</h2>
+				<p>E-Cart is driven by customer obsession, innovation, operational excellence, and long-term vision. We
+					strive to be the
+					most customer-centric company, a top employer, and a safe workplace. Pioneering features like
+					customer reviews, 1-Click
+					shopping, Prime, and Just Walk Out technology define our commitment to revolutionizing shopping
+					experiences. Join us in
+					shaping the future of commerce.</p>
+
+			</div>
+			<div class="box links">
+				<h2>Company</h2>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Our Teams</a></li>
+				<li><a href="#">Jobs</a></li>
+				<li><a href="#">Career</a></li>
+			</div>
+			<div class="box links">
+				<h2>Quick Links</h2>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Refund Policy</a></li>
+				<li><a href="#">Cookies Policy</a></li>
+			</div>
+			<div class="box contact">
+				<h2>Contact Us</h2>
+				<ul>
+					<li>
+						<span><i class="fas fa-phone"></i></span>
+						<p><a href="#">+0123456789</a></p>
+					</li>
+					<li>
+						<span><i class="fas fa-envelope"></i></span>
+						<p><a href="#">developmentteam@ecart.com</a></p>
+					</li>
+				</ul>
+				<ul class="icons">
+					<li>
+						<a href="#"><i class="fab fa-github"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fab fa-x-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="copyright">
+				Copyright &copy; E-cart. All Right Reserved.
+			</div>
+		</div>
+	</footer>
+</body>
+
 </html>
