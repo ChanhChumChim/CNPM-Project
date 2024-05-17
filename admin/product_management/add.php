@@ -1,6 +1,5 @@
 <p> Add New Products </p>
-<table border="1" widt
-+h="100%" style="border-collapse: collapse;">
+<table border="1" width="100%" style="border-collapse: collapse;">
     <form method="POST" action="product_management/xuly.php" enctype="multipart/form-data">
         <tr>
             <td>Product Name</td>

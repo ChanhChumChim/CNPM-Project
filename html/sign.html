@@ -1,83 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/png" href="../images/favicon.png">
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-		<title>E-Cart | Sàn thương mại điện tử số 1 VI </title>
-	</head>
-
-	<body>
-		<header>
-			<nav class="navbar">
-				<ul>
-					<li class="Logo"><a href="index.html"><img src="../images/favicon.png" alt="logo"></a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="product.html">Products</a></li>
-					<li><a href="cart.html">Your Cart</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-					<li><a href="sign.html">Sign In</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main>
-			
-		</main>
-
-		<footer>
-			<div class="wrapper">
-				<div class="box info">
-					<h2 class="title">E-cart</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Consectetur dicta unde consequuntur maxime nobis officia nam earum, soluta a consequatur voluptate accusamus sapiente enim reprehenderit laboriosam, dolore veniam nulla. Illum.</p>
-					<ul class="icons">
-						<li>
-							<a href="#"><i class="fab fa-github"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-x-twitter"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-						</li>
-					</ul>
-				</div>
-				<div class="box links">
-					<h2>Company</h2>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Our Teams</a></li>
-					<li><a href="#">Jobs</a></li>
-					<li><a href="#">Career</a></li>
-				</div>
-				<div class="box links">
-					<h2>Quick Links</h2>
-					<li><a href="#">Terms of Use</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Refund Policy</a></li>
-					<li><a href="#">Cookies Policy</a></li>
-				</div>
-				<div class="box contact">
-					<h2>Contact Us</h2>
-					<ul>
-						<li>
-							<span><i class="fas fa-phone"></i></span>
-							<p><a href="#">+0123456789</a></p>
-						</li>
-						<li>
-							<span><i class="fas fa-envelope"></i></span>
-							<p><a href="#">developmentteam@ecart.com</a></p>
-						</li>
-					</ul>
-				</div>
-				<div class="copyright">
-					Copyright &copy; E-cart. All Right Reserved.
-				</div>
-			</div>
-		</footer>
-	</body> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="../css/login_style.css">
+        <title>Sign In</title>
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form action="../php/sign_up.php" method="POST">
+                    <h1>Create Account</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>Or use your email for registration</span>
+                    <input type="text" placeholder="name" name="name">
+                    <input type="email" placeholder="email" name="email">
+                    <input type="password" placeholder="password" name="password">
+                    <input type="text" placeholder="address" name="address">
+                    <input type="text" placeholder="phone-number" name="phone-number">
+                    <div id="signup-message" class="signup-message"></div>
+                    <button type="submit" name="dangky">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form action="../php/sign_in.php" method="POST">
+                    <h1>Sign In</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>If you have already signed up</span>
+                    <input type="email" placeholder="email" name="email">
+                    <input type="password" placeholder="password" name="password">
+                    <a href="index.html">Return to homepage</a>
+                    <a href="../admin/admin_login.php">Login as admin</a>
+                    <button type="submit" name="dangnhap">Sign In</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                  <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Welcome Back!</h1>
+                        <p>Enter your personal details to use all of site features</p>
+                        <button class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details to use all of site features</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                  </div>  
+            </div>
+        </div>
+        <script src="../js/script.js"></script>
+    </body>
 </html>

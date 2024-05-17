@@ -38,7 +38,7 @@
             ?>
         </td>
         <td>
-            <a href="product_management/xuly.php?idsanpham=<?php echo $row['product_id'] ?>">Xóa</a> 
+            <a href="product_management/xuly.php?idsanpham=<?php echo $row['product_id'] ?>">Delete</a> 
         </td>
     </tr>
     <?php
