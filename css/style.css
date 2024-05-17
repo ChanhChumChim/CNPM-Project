@@ -51,6 +51,7 @@ body {
     padding: 5px;
     border-style: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
   }
 
   button.checkout-button {
@@ -172,7 +173,7 @@ body {
   }
 
   .information span {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
   }
 
