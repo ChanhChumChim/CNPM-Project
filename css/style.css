@@ -72,6 +72,20 @@ body {
     font-size: 10px;
   }
 
+  .mt-5,
+  .my-5 {
+    margin-bottom: 3rem !important;
+    margin-top: 3rem !important;
+  }
+
+  element.style {
+    width: 100%;
+    resize: none;
+    border-radius: 10px;
+    background-color: #eeeeee;
+    color: gray;
+  }
+
   label.radio {
     cursor: pointer;
   }
@@ -103,6 +117,7 @@ body {
   .btn-primary {
     background-color: #f4f4f4;
     color: #000;
+    border-radius: 10px;
   }
 
   .credit-inputs {
@@ -153,7 +168,7 @@ body {
 
 /*Footer*/
 footer {
-  border-radius: 10px;
+  border-radius: 0%;
   font-family: "Poppins", sans-serif;
   list-style: none;
   text-decoration: none;
@@ -170,6 +185,7 @@ footer {
   width: 100%;
   height: auto;
   padding: 30px 30px;
+  padding-bottom: 0%;
 }
 
 footer .wrapper {
