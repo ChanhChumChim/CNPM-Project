@@ -19,6 +19,10 @@
   text-align: center;
 }
 
+.ecart-icon {
+  justify-content: center;
+}
+
 .navbar a:hover {
   background-color: darkgrey;
 }
@@ -46,6 +50,14 @@ body {
     color: #ffffff;
   }
 
+  .remove {
+    background-color: transparent;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    border: none;
+    margin-left: 10px;
+    padding: none;
+  }
+
   .discount-code {
     border-radius: 7px;
     padding: 5px;
@@ -59,6 +71,12 @@ body {
     padding: 5px;
     border-style: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+
+  button.checkout-button:hover {
+    background-color: #0099ff;
+    transform: scale(1.5);
   }
 
   button.continue-button {
@@ -66,6 +84,13 @@ body {
     padding: 5px;
     border-style: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.3s;
+  }
+
+  button.continue-button:hover {
+    background-color: #0099ff;
+    transform: scale(1.1);
   }
 
   li::marker {
@@ -81,7 +106,7 @@ body {
   }
 
   .cart {
-    background: #e0e0e0;
+    background: #ffffff;
     padding: 100px;
   }
 
@@ -174,7 +199,7 @@ body {
 
   .information span {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 350;
   }
 
   .information {
