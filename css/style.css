@@ -38,11 +38,37 @@ body {
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+
   .payment-info {
     background: #d2691e;
     padding: 150px 30px 150px 30px;
     border-radius: 10px;
-    color: #c6c6c6;
+    color: #ffffff;
+  }
+
+  .discount-code {
+    border-radius: 7px;
+    padding: 5px;
+    border-style: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  button.checkout-button {
+    border-radius: 7px;
+    padding: 5px;
+    border-style: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  button.continue-button {
+    border-radius: 7px;
+    padding: 5px;
+    border-style: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  li::marker {
+    content: "";
   }
 
   .product-details {
