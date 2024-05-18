@@ -170,10 +170,6 @@ document
 // Initialize subtotal on page load
 calculateSubtotal();
 
-
-
-
-
 // document.querySelector(".close").addEventListener("click", () => {
 //   document.getElementById("removeModal").style.display = "none";
 //   itemToRemove = null;
