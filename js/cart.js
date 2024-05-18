@@ -156,12 +156,26 @@ function applyDiscountCode() {
     discountMessage.style.color = "green";
   } else {
     discountPercentage = 0;
-    discountMessage.textContent = "Invalid discount code";
+    discountMessage.textContent = "Invalid discount code!";
     discountMessage.style.color = "BLUE";
   }
 
   calculateSubtotal();
 }
+
+// Remove spaces from discount code and handle Enter key press
+document.getElementById("discount-code").addEventListener("input", (event) => {
+  event.target.value = event.target.value.replace(/\s+/g, "");
+});
+
+document
+  .getElementById("discount-code")
+  .addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent the default action (submitting the form or adding a newline)
+      applyDiscountCode(); // Apply the discount code
+    }
+  });
 
 document
   .getElementById("applyDiscount")
