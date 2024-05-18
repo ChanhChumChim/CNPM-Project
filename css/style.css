@@ -158,7 +158,30 @@ body {
     margin-bottom: 10px;
   }
 
+
+  /* .checkout-button-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  } */
+
+  .checkout-button {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+
+
   button.checkout-button {
+    width: 70%;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    /* height: 50px; */
+    margin-left: 50px;
+    display: block;
     border-radius: 7px;
     padding: 5px;
     border-style: hidden;

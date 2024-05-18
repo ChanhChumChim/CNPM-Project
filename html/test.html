@@ -57,28 +57,27 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
                             <div class="d-flex flex-row"><img class="rounded"
                                     src="https://www.thephonetalks.com/wp-content/uploads/2023/09/iPhone-15-Pro-Max.jpg"
                                     width="40">
                                 <div class="ml-2"><span class="font-weight-bold d-block">Iphone 15 Pro Max</span><span
-                                        class="spec">256GB, Light Yellow</span></div>
+                                        class="spec">256GB, Light
+                                        Yellow</span></div>
                             </div>
-                            <!-- <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span
-                                    class="d-block ml-5 font-weight-bold">$900</span>
-                                <button class="remove"><i class="fa fa-trash-o"></i>
-                                </button>
-                            </div> -->
-                            <div class="d-flex flex-row align-items-center item" data-quantity="1">
+                            <div class="d-flex flex-row align-items-center item" data-price="900" data-quantity="1">
                                 <div class="d-flex flex-row align-items-center ml-5">
                                     <button class="btn btn-secondary btn-sm mr-2 decrease-btn">-</button>
-                                    <span class="d-block quantity"></span>
+                                    <span class="d-block quantity">1</span>
                                     <button class="btn btn-secondary btn-sm ml-2 increase-btn">+</button>
                                 </div>
                                 <span class="d-block ml-5 font-weight-bold">$900</span>
                                 <button class="remove"><i class="fa fa-trash-o"></i></button>
                             </div>
                         </div>
+
+
                         <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
                             <div class="d-flex flex-row"><img class="rounded"
                                     src="https://www.t-mobile.com/news/_admin/uploads/2021/03/nr-hero-OnePlus9-Flagships-3-22-21.png"
@@ -90,13 +89,13 @@
                                     class="d-block ml-5 font-weight-bold">$900</span><button class="remove"
                                     style="border: 0; background-color: #ffffff; margin-left: 10px;"><i
                                         class="fa fa-trash-o"></i></button></div> -->
-                            <div class="d-flex flex-row align-items-center item" data-quantity="1">
+                            <div class="d-flex flex-row align-items-center item" data-price="900" data-quantity="1">
                                 <div class="d-flex flex-row align-items-center ml-5">
                                     <button class="btn btn-secondary btn-sm mr-2 decrease-btn">-</button>
-                                    <span class="d-block quantity"></span>
+                                    <span class="d-block quantity">1</span>
                                     <button class="btn btn-secondary btn-sm ml-2 increase-btn">+</button>
                                 </div>
-                                <span class="d-block ml-5 font-weight-bold">$900</span>
+                                <span class="d-block ml-5 font-weight-bold">$920</span>
                                 <button class="remove"><i class="fa fa-trash-o"></i></button>
                             </div>
 
@@ -108,13 +107,13 @@
                                 <div class="ml-2"><span class="font-weight-bold d-block">Google Pixel 8 Pro</span><span
                                         class="spec">256GB, Axe black</span></div>
                             </div>
-                            <div class="d-flex flex-row align-items-center item" data-quantity="1">
+                            <div class="d-flex flex-row align-items-center item" data-price="900" data-quantity="1">
                                 <div class="d-flex flex-row align-items-center ml-5">
                                     <button class="btn btn-secondary btn-sm mr-2 decrease-btn">-</button>
-                                    <span class="d-block quantity"></span>
+                                    <span class="d-block quantity">1</span>
                                     <button class="btn btn-secondary btn-sm ml-2 increase-btn">+</button>
                                 </div>
-                                <span class="d-block ml-5 font-weight-bold">$800</span>
+                                <span class="d-block ml-5 font-weight-bold">$980</span>
                                 <button class="remove"><i class="fa fa-trash-o"></i></button>
                             </div>
                             <!-- <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span
@@ -132,42 +131,45 @@
                                     class="d-block ml-5 font-weight-bold">$999</span><button class="remove"><i
                                         class="fa fa-trash-o"></i></button></div> -->
 
-                            <div class="d-flex flex-row align-items-center item" data-quantity="1">
+                            <div class="d-flex flex-row align-items-center item" data-price="900" data-quantity="1">
                                 <div class="d-flex flex-row align-items-center ml-5">
                                     <button class="btn btn-secondary btn-sm mr-2 decrease-btn">-</button>
-                                    <span class="d-block quantity"></span>
+                                    <span class="d-block quantity">1</span>
                                     <button class="btn btn-secondary btn-sm ml-2 increase-btn">+</button>
                                 </div>
-                                <span class="d-block ml-5 font-weight-bold">$999</span>
+                                <span class="d-block ml-5 font-weight-bold">$930</span>
                                 <button class="remove"><i class="fa fa-trash-o"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-4">
                     <div class="payment-info">
                         <div class="cute porn">
                             <h3>eCoupon</h3>
                             <label for="discount-code" class="sr-only">Discount Code</label>
                             <textarea id="discount-code" rows="1" cols="40"
-                                style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;"
-                                class="discount-code" placeholder="Enter your discount code"
-                                onfocus="this.placeholder='';"
+                                style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;" class="discount-code"
+                                placeholder="Enter your discount code" onfocus="this.placeholder='';"
                                 onblur="if(this.value === '') { this.placeholder = 'Enter your discount code'; }"></textarea>
                         </div>
                         <div class="d-flex justify-content-between information">
-                            <span>Subtotal</span><span>$3000.00</span>
+                            <span>Subtotal</span><span id="subtotal">$0.00</span>
                         </div>
                         <div class="d-flex justify-content-between information"><span>Shipping</span><span>$20.00</span>
                         </div>
                         <div class="d-flex justify-content-between information"><span>Total (Incl.
-                                VAT)</span><span>$3020.00</span></div>
+                                VAT)</span><span id="total">$20.00</span></div>
                         <button type="button" onclick="location.href='payment.html'"
-                            class="btn btn-primary btn-block d-flex justify-content-between mt-3 checkout-button btn-flip"
-                            data-back="Checkout" data-front="$3020.00">
+                            class="btn btn-primary btn-block d-flex justify-content-center mt-3 checkout-button btn-flip"
+                            data-back="Checkout" data-front="">
+                            
                         </button>
                     </div>
                 </div>
+
+
             </div>
         </div>
         <script src="/js/cart.js"></script>
