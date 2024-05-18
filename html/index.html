@@ -2,108 +2,199 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="../images/favicon.png">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-	<title>E-Cart | Sàn thương mại điện tử số 1 VI </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" class="ecart-icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>E-Cart | Sàn thương mại điện tử số 1 VI </title>
 </head>
 
 <body>
-	<header>
-		<nav class="navbar">
-			<ul>
-				<li class="Logo"><a href="index.html"><img src="../images/favicon.png" alt="logo"></a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="product.html">Products</a></li>
-				<li><a href="cart.html">Your Cart</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
-				<li><a href="sign.html">Sign In</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li class="Logo"><button type="button" class="navbar navbar-light btn button"><img
+                            src="../images/favicon.png" alt="logo"></button></li>
+                <li><button type="button" class="navbar navbar-light btn  button"
+                        onclick="location.href='about.html'">About</button>
+                </li>
+                <li><button type="button" class="navbar navbar-light btn  button"
+                        onclick="location.href='contact.html'">Contact
+                        Us</button></li>
+                <li><button type="button" class="navbar navbar-light btn  button"
+                        onclick="location.href='cart.html'">Your
+                        Cart</button></li>
+                <li><button type="button" class="navbar navbar-light btn  button"
+                        onclick="location.href='product.html'">Products</button></li>
+                <li><button type="button" class="navbar navbar-light btn  button"
+                        onclick="location.href='sign.html'">Sign
+                        In</button></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <main>
+        <div class="container mt-5 p-3 rounded cart">
+            <div class="row no-gutters">
+                <div class="col-md-8">
+                    <div class="product-details mr-2">
+                        <div class="d-flex flex-row align-items-center">
+                            <li><button type="button" class="btn-flip continue-button" data-back="Home Page"
+                                    data-front="Continue Shopping" onclick="location.href='product.html';">
+                                </button>
+                            </li>
+                        </div>
+                        <hr>
+                        <h6 class="mb-0" style="color: #000000;">Shopping cart</h6>
+                        <div class="d-flex justify-content-between"><span>You have 4 items in your cart</span>
+                            <div class="d-flex flex-row align-items-center">
+                                <div class="price ml-2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded"
+                                    src="https://www.thephonetalks.com/wp-content/uploads/2023/09/iPhone-15-Pro-Max.jpg"
+                                    width="40">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Iphone 15 Pro Max</span><span
+                                        class="spec">256GB, Light Yellow</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span
+                                    class="d-block ml-5 font-weight-bold">$900</span>
+                                <button class="remove"><i class="fa fa-trash-o"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded"
+                                    src="https://www.t-mobile.com/news/_admin/uploads/2021/03/nr-hero-OnePlus9-Flagships-3-22-21.png"
+                                    width="40">
+                                <div class="ml-2"><span class="font-weight-bold d-block">One Plus 9T</span><span
+                                        class="spec">256GB, Baby Blue</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span
+                                    class="d-block ml-5 font-weight-bold">$900</span><button class="remove"
+                                    style="border: 0; background-color: #ffffff; margin-left: 10px;"><i
+                                        class="fa fa-trash-o"></i></button></div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded"
+                                    src="https://www.cnet.com/a/img/resize/dd1cf0923f2ff9f47fb7a8772c53d784712f91cd/hub/2023/10/11/79ea815a-1338-45e4-beaf-f3381b0781e4/google-pixel-8-pro-review-cnet.jpg?auto=webp&fit=crop&height=1200&width=1200"
+                                    width="40">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Google Pixel 8 Pro</span><span
+                                        class="spec">256GB, Axe black</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span
+                                    class="d-block ml-5 font-weight-bold">$800</span><button class="remove"><i
+                                        class="fa fa-trash-o"></i></button></div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded"
+                                    src="https://static0.pocketlintimages.com/wordpress/wp-content/uploads/2023/04/note20square.jpg"
+                                    width="40">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Samsung Galaxy Note
+                                        10&nbsp;</span><span class="spec">256GB, Bronze Gold</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span
+                                    class="d-block ml-5 font-weight-bold">$999</span><button class="remove"><i
+                                        class="fa fa-trash-o"></i></button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="payment-info">
+                        <div class="cute porn">
+                            <h3>eCoupon</h3>
+                            <label for="discount-code" class="sr-only">Discount Code</label>
+                            <textarea id="discount-code" rows="1" cols="40"
+                                style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;"
+                                class="discount-code" placeholder="Enter your discount code"
+                                onfocus="this.placeholder='';"
+                                onblur="if(this.value === '') { this.placeholder = 'Enter your discount code'; }"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-between information">
+                            <span>Subtotal</span><span>$3000.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between information"><span>Shipping</span><span>$20.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between information"><span>Total (Incl.
+                                VAT)</span><span>$3020.00</span></div>
+                        <button type="button" onclick="location.href='payment.html'"
+                            class="btn btn-primary btn-block d-flex justify-content-between mt-3 checkout-button btn-flip"
+                            data-back="Checkout" data-front="$3020.00">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	<main>
-		<h1>Main Section</h1>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore doloribus voluptatum, cupiditate expedita,
-			earum deleniti esse, repellat eius nam omnis molestias doloremque? Cumque illo hic aliquid nihil obcaecati,
-			neque atque.</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore doloribus voluptatum, cupiditate expedita,
-			earum deleniti esse, repellat eius nam omnis molestias doloremque? Cumque illo hic aliquid nihil obcaecati,
-			neque atque.</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore doloribus voluptatum, cupiditate expedita,
-			earum deleniti esse, repellat eius nam omnis molestias doloremque? Cumque illo hic aliquid nihil obcaecati,
-			neque atque.</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore doloribus voluptatum, cupiditate expedita,
-			earum deleniti esse, repellat eius nam omnis molestias doloremque? Cumque illo hic aliquid nihil obcaecati,
-			neque atque.</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore doloribus voluptatum, cupiditate expedita,
-			earum deleniti esse, repellat eius nam omnis molestias doloremque? Cumque illo hic aliquid nihil obcaecati,
-			neque atque.</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore doloribus voluptatum, cupiditate expedita,
-			earum deleniti esse, repellat eius nam omnis molestias doloremque? Cumque illo hic aliquid nihil obcaecati,
-			neque atque.</p>
-	</main>
+    </main> -->
+</body>
+<footer>
+    <div class="wrapper">
+        <div class="box info">
+            <h2 class="title">E-cart</h2>
+            <p class="text-justify"> E-Cart is driven by customer obsession, innovation, operational excellence, and
+                long-term vision. We
+                strive to be the
+                most customer-centric company, a top employer, and a safe workplace. Pioneering features like
+                customer reviews, 1-Click
+                shopping, Prime, and Just Walk Out technology define our commitment to revolutionizing shopping
+                experiences. Join us in
+                shaping the future of commerce.</p>
 
-	<footer>
-		<div class="wrapper">
-			<div class="box info">
-				<h2 class="title">E-cart</h2>
-				<p>E-Cart is driven by customer obsession, innovation, operational excellence, and long-term vision. We
-					strive to be the
-					most customer-centric company, a top employer, and a safe workplace. Pioneering features like
-					customer reviews, 1-Click
-					shopping, Prime, and Just Walk Out technology define our commitment to revolutionizing shopping
-					experiences. Join us in
-					shaping the future of commerce.</p>
-				<ul class="icons">
-					<li>
-						<a href="#"><i class="fab fa-github"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="fab fa-facebook-f"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="fab fa-x-twitter"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="fab fa-linkedin-in"></i></a>
-					</li>
-				</ul>
-			</div>
-			<div class="box links">
-				<h2>Company</h2>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Our Teams</a></li>
-				<li><a href="#">Jobs</a></li>
-				<li><a href="#">Career</a></li>
-			</div>
-			<div class="box links">
-				<h2>Quick Links</h2>
-				<li><a href="#">Terms of Use</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Refund Policy</a></li>
-				<li><a href="#">Cookies Policy</a></li>
-			</div>
-			<div class="box contact">
-				<h2>Contact Us</h2>
-				<ul>
-					<li>
-						<span><i class="fas fa-phone"></i></span>
-						<p><a href="#">+0123456789</a></p>
-					</li>
-					<li>
-						<span><i class="fas fa-envelope"></i></span>
-						<p><a href="#">developmentteam@ecart.com</a></p>
-					</li>
-				</ul>
-			</div>
-			<div class="copyright">
-				Copyright &copy; E-cart. All Right Reserved.
-			</div>
-		</div>
-	</footer>
+        </div>
+        <div class="box links">
+            <h2>Company</h2>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Teams</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Career</a></li>
+        </div>
+        <div class="box links">
+            <h2>Quick Links</h2>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Cookies Policy</a></li>
+        </div>
+        <div class="box contact">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>
+                    <span><i class="fas fa-phone"></i></span>
+                    <p><a href="#">+0123456789</a></p>
+                </li>
+                <li>
+                    <span><i class="fas fa-envelope"></i></span>
+                    <p><a href="#">developmentteam@ecart.com</a></p>
+                </li>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright">
+            Copyright &copy; E-cart. All Right Reserved.
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>
