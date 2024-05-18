@@ -158,7 +158,6 @@ body {
     margin-bottom: 10px;
   }
 
-
   /* .checkout-button-container {
     margin-top: 1rem;
     display: flex;
@@ -170,9 +169,50 @@ body {
     display: inline-block;
     text-align: center;
     width: 100%;
-}
+  }
 
+  .fa-solid {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    border-style: none;
+    width: 32px;
+    height: 32px;
+    color: #252525;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0 5px;
+  }
 
+  .fa-solid:hover {
+    background-color: #9d9d9d;
+    color: #000;
+  }
+
+  /* Style for quantity span */
+  .quantity {
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  /* Style the remove button */
+  .remove {
+    /* background-color: #00eeff; */
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    color: rgb(255, 0, 0);
+    font-size: 16px;
+    line-height: 1;
+    transition: 0.3s;
+  }
+
+  .remove:hover {
+    /* background-color: #00eeff; */
+    transform: scale(1.5);
+  }
 
   button.checkout-button {
     width: 70%;

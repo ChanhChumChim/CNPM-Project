@@ -8,12 +8,22 @@ function calculateSubtotal() {
       subtotal += quantity * price;
     }
   });
+
+  let shippingCost = items.length > 0 ? 20 : 0; // Set shipping cost to 0 if no items
   document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
-  const total = subtotal + 20; // Assuming $20 is the shipping cost
+  const total = subtotal + shippingCost;
   document.getElementById("total").textContent = `$${total.toFixed(2)}`;
   document.querySelector(".checkout-button").textContent = `$${total.toFixed(
     2
-  )}`; // Update checkout button
+  )}`;
+  const itemCount = items.length;
+  const itemCountText =
+    itemCount === 0
+      ? "You have nothing in your cart"
+      : `You have ${itemCount} ${
+          itemCount === 1 ? "item" : "items"
+        } in your cart`;
+  document.getElementById("item-count").textContent = itemCountText;
 }
 
 let items = document.querySelectorAll(".item");
@@ -29,7 +39,7 @@ items.forEach((item) => {
     quantityElement.textContent = quantity;
     item.dataset.quantity = quantity;
     playSound("increase");
-    calculateSubtotal(); // Recalculate subtotal
+    calculateSubtotal();
   });
 
   decreaseBtn.addEventListener("click", () => {
@@ -40,16 +50,16 @@ items.forEach((item) => {
       quantityElement.textContent = quantity;
       item.dataset.quantity = quantity;
       playSound("decrease");
-      calculateSubtotal(); // Recalculate subtotal
+      calculateSubtotal();
     }
   });
 });
 
 document.querySelectorAll(".remove").forEach((button) => {
   button.addEventListener("click", () => {
-    const itemElement = button.closest(".item");
+    const itemElement = button.closest(".items");
     itemElement.remove();
-    calculateSubtotal(); // Recalculate subtotal
+    calculateSubtotal();
   });
 });
 
@@ -61,10 +71,15 @@ function playSound(type) {
     sound = document.getElementById("decrease-sound");
   }
   if (sound) {
-    sound.currentTime = 0; // Reset to the beginning
-    sound.play();
+    sound.pause();
+    sound.currentTime = 0;
+    sound.play().catch((error) => console.error(error));
   }
 }
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     playSound('increase');
+//     playSound('decrease');
 
 // Initialize subtotal on page load
 calculateSubtotal();

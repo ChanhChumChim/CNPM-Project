@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css">
 
     <title>E-Cart | Sàn thương mại điện tử số 1 VI </title>
 </head>
@@ -50,8 +52,9 @@
                             </li>
                         </div>
                         <hr>
-                        <h6 class="mb-0" style="color: #000000;">Shopping cart</h6>
-                        <div class="d-flex justify-content-between"><span>You have 4 items in your cart</span>
+                        <h6 class="mb-0" style="color: #000000;">Shopping Cart</h6>
+                        <div class="d-flex justify-content-between"><span id="item-count">You have 4 items in your
+                                cart</span>
                             <div class="d-flex flex-row align-items-center">
                                 <div class="price ml-2">
                                 </div>
@@ -68,9 +71,11 @@
                             </div>
                             <div class="d-flex flex-row align-items-center item" data-price="900" data-quantity="1">
                                 <div class="d-flex flex-row align-items-center ml-5">
-                                    <button class="btn btn-secondary btn-sm mr-2 decrease-btn">-</button>
+                                    <button
+                                        class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
                                     <span class="d-block quantity">1</span>
-                                    <button class="btn btn-secondary btn-sm ml-2 increase-btn">+</button>
+                                    <button
+                                        class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
                                 </div>
                                 <span class="d-block ml-5 font-weight-bold">$900</span>
                                 <button class="remove"><i class="fa fa-trash-o"></i></button>
@@ -91,9 +96,11 @@
                                         class="fa fa-trash-o"></i></button></div> -->
                             <div class="d-flex flex-row align-items-center item" data-price="900" data-quantity="1">
                                 <div class="d-flex flex-row align-items-center ml-5">
-                                    <button class="btn btn-secondary btn-sm mr-2 decrease-btn">-</button>
+                                    <button
+                                        class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
                                     <span class="d-block quantity">1</span>
-                                    <button class="btn btn-secondary btn-sm ml-2 increase-btn">+</button>
+                                    <button
+                                        class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
                                 </div>
                                 <span class="d-block ml-5 font-weight-bold">$920</span>
                                 <button class="remove"><i class="fa fa-trash-o"></i></button>
@@ -105,13 +112,15 @@
                                     src="https://www.cnet.com/a/img/resize/dd1cf0923f2ff9f47fb7a8772c53d784712f91cd/hub/2023/10/11/79ea815a-1338-45e4-beaf-f3381b0781e4/google-pixel-8-pro-review-cnet.jpg?auto=webp&fit=crop&height=1200&width=1200"
                                     width="40">
                                 <div class="ml-2"><span class="font-weight-bold d-block">Google Pixel 8 Pro</span><span
-                                        class="spec">256GB, Axe black</span></div>
+                                        class="spec">256GB, Axe Black</span></div>
                             </div>
                             <div class="d-flex flex-row align-items-center item" data-price="900" data-quantity="1">
                                 <div class="d-flex flex-row align-items-center ml-5">
-                                    <button class="btn btn-secondary btn-sm mr-2 decrease-btn">-</button>
+                                    <button
+                                        class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
                                     <span class="d-block quantity">1</span>
-                                    <button class="btn btn-secondary btn-sm ml-2 increase-btn">+</button>
+                                    <button
+                                        class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
                                 </div>
                                 <span class="d-block ml-5 font-weight-bold">$980</span>
                                 <button class="remove"><i class="fa fa-trash-o"></i></button>
@@ -133,9 +142,11 @@
 
                             <div class="d-flex flex-row align-items-center item" data-price="900" data-quantity="1">
                                 <div class="d-flex flex-row align-items-center ml-5">
-                                    <button class="btn btn-secondary btn-sm mr-2 decrease-btn">-</button>
+                                    <button
+                                        class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
                                     <span class="d-block quantity">1</span>
-                                    <button class="btn btn-secondary btn-sm ml-2 increase-btn">+</button>
+                                    <button
+                                        class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
                                 </div>
                                 <span class="d-block ml-5 font-weight-bold">$930</span>
                                 <button class="remove"><i class="fa fa-trash-o"></i></button>
@@ -143,15 +154,16 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="payment-info">
                         <div class="cute porn">
                             <h3>eCoupon</h3>
                             <label for="discount-code" class="sr-only">Discount Code</label>
                             <textarea id="discount-code" rows="1" cols="40"
-                                style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;" class="discount-code"
-                                placeholder="Enter your discount code" onfocus="this.placeholder='';"
+                                style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;"
+                                class="discount-code" placeholder="Enter your discount code"
+                                onfocus="this.placeholder='';"
                                 onblur="if(this.value === '') { this.placeholder = 'Enter your discount code'; }"></textarea>
                         </div>
                         <div class="d-flex justify-content-between information">
@@ -164,7 +176,7 @@
                         <button type="button" onclick="location.href='payment.html'"
                             class="btn btn-primary btn-block d-flex justify-content-center mt-3 checkout-button btn-flip"
                             data-back="Checkout" data-front="">
-                            
+
                         </button>
                     </div>
                 </div>
