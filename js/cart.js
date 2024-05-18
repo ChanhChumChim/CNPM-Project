@@ -28,6 +28,7 @@ items.forEach((item) => {
     quantity++;
     quantityElement.textContent = quantity;
     item.dataset.quantity = quantity;
+    playSound("increase");
     calculateSubtotal(); // Recalculate subtotal
   });
 
@@ -38,6 +39,7 @@ items.forEach((item) => {
       quantity--;
       quantityElement.textContent = quantity;
       item.dataset.quantity = quantity;
+      playSound("decrease");
       calculateSubtotal(); // Recalculate subtotal
     }
   });
@@ -50,6 +52,19 @@ document.querySelectorAll(".remove").forEach((button) => {
     calculateSubtotal(); // Recalculate subtotal
   });
 });
+
+function playSound(type) {
+  let sound;
+  if (type === "increase") {
+    sound = document.getElementById("increase-sound");
+  } else if (type === "decrease") {
+    sound = document.getElementById("decrease-sound");
+  }
+  if (sound) {
+    sound.currentTime = 0; // Reset to the beginning
+    sound.play();
+  }
+}
 
 // Initialize subtotal on page load
 calculateSubtotal();
