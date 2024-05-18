@@ -37,11 +37,50 @@
 /*Header*/
 
 /*Index Body*/
+
 body {
   color: white;
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  .btn-flip {
+    opacity: 1;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    /* text-align: center; */
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .btn-flip:hover:after {
+    transform: translateY(0) rotateX(0);
+  }
+  .btn-flip:hover:before {
+    transform: translateY(50%) rotateX(90deg);
+  }
+  .btn-flip:after {
+    top: 0;
+    left: 0;
+    text-align: right;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+  }
+  .btn-flip:before {
+    top: 0;
+    left: 0;
+    text-align: left;
+    display: block;
+    transition: 0.3s;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+  }
 
   .payment-info {
     background: #d2691e;
@@ -74,24 +113,66 @@ body {
     transition: transform 0.3s;
   }
 
-  button.checkout-button:hover {
+  /* button.checkout-button:hover {
     background-color: #0099ff;
     transform: scale(1.5);
-  }
+  } */
 
   button.continue-button {
     border-radius: 7px;
     padding: 5px;
     border-style: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: rgb(255, 255, 255);
-    transition: transform 0.3s;
+    background-color: #2f61e0;
+    opacity: 1;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .btn-flip.continue-button:hover:after {
+    transform: translateY(0) rotateX(0);
+  }
+  .btn-flip.continue-button:hover:before {
+    transform: translateY(50%) rotateX(90deg);
+  }
+  .btn-flip.continue-button:after {
+    position: absolute;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding-top: 4px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+  }
+  .btn-flip.continue-button:before {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    content: attr(data-front);
+    transform: translateY(+0%) rotateX(0);
   }
 
-  button.continue-button:hover {
+  /*button.continue-button:hover {
     background-color: #0099ff;
     transform: scale(1.1);
-  }
+  } */
 
   li::marker {
     content: "";

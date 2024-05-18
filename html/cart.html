@@ -35,8 +35,9 @@
 				<div class="col-md-8">
 					<div class="product-details mr-2">
 						<div class="d-flex flex-row align-items-center">
-							<li><button type="button" class="continue-button"
-									onclick="location.href='product.html';">Continue Shopping</button>
+							<li><button type="button" class="btn-flip continue-button" data-back="Home Page"
+									data-front="Continue Shopping" onclick="location.href='product.html';">
+								</button>
 							</li>
 						</div>
 						<hr>
@@ -111,10 +112,10 @@
 						<div class="d-flex justify-content-between information"><span>Shipping</span><span>$20.00</span>
 						</div>
 						<div class="d-flex justify-content-between information"><span>Total (Incl.
-								VAT)</span><span>$3020.00</span></div><button
-							class="btn btn-primary btn-block d-flex justify-content-between mt-3 checkout-button"
-							type="button" href="payment.html"><span>$3020.00</span>
-							<li><a><span>Checkout</a></li></span>
+								VAT)</span><span>$3020.00</span></div>
+						<button type="button" onclick="location.href='payment.html'"
+							class="btn btn-primary btn-block d-flex justify-content-between mt-3 checkout-button btn-flip"
+							data-back="Checkout" data-front="$3020.00">
 						</button>
 					</div>
 				</div>
