@@ -73,7 +73,8 @@
                                 <div class="d-flex flex-row align-items-center ml-5">
                                     <button
                                         class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
-                                    <span class="d-block quantity">1</span>
+                                    <textarea rows="1" cols="1" class="d-block quantity" rows="1"
+                                        style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;">1</textarea>
                                     <button
                                         class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
                                 </div>
@@ -98,7 +99,8 @@
                                 <div class="d-flex flex-row align-items-center ml-5">
                                     <button
                                         class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
-                                    <span class="d-block quantity">1</span>
+                                    <textarea rows="1" cols="1" class="d-block quantity" rows="1"
+                                        style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;">1</textarea>
                                     <button
                                         class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
                                 </div>
@@ -118,7 +120,8 @@
                                 <div class="d-flex flex-row align-items-center ml-5">
                                     <button
                                         class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
-                                    <span class="d-block quantity">1</span>
+                                    <textarea rows="1" cols="1" class="d-block quantity" rows="1"
+                                        style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;">1</textarea>
                                     <button
                                         class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
                                 </div>
@@ -144,7 +147,8 @@
                                 <div class="d-flex flex-row align-items-center ml-5">
                                     <button
                                         class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
-                                    <span class="d-block quantity">1</span>
+                                    <textarea rows="1" cols="1" class="d-block quantity" rows="1"
+                                        style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4; align-items: center;">1</textarea>
                                     <button
                                         class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
                                 </div>
@@ -158,35 +162,56 @@
                 <div class="col-md-4">
                     <div class="payment-info">
                         <div class="cute porn">
-                            <h3>eCoupon</h3>
-                            <label for="discount-code" class="sr-only">Discount Code</label>
-                            <textarea id="discount-code" rows="1" cols="40"
-                                style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;"
-                                class="discount-code" placeholder="Enter your discount code"
-                                onfocus="this.placeholder='';"
-                                onblur="if(this.value === '') { this.placeholder = 'Enter your discount code'; }"></textarea>
-                        </div>
-                        <div class="d-flex justify-content-between information">
-                            <span>Subtotal</span><span id="subtotal">$0.00</span>
-                        </div>
-                        <div class="d-flex justify-content-between information"><span>Shipping</span><span>$20.00</span>
-                        </div>
-                        <div class="d-flex justify-content-between information"><span>Total (Incl.
-                                VAT)</span><span id="total">$20.00</span></div>
-                        <button type="button" onclick="location.href='payment.html'"
-                            class="btn btn-primary btn-block d-flex justify-content-center mt-3 checkout-button btn-flip"
-                            data-back="Checkout" data-front="">
+                            <div class="discount-section">
+                                <h3>eCoupon</h3>
+                                <label for="discount-code" class="sr-only">Discount Code</label>
+                                <textarea id="discount-code" rows="1" cols="40"
+                                    style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;"
+                                    class="discount-code" placeholder="Enter your discount code"
+                                    onfocus="this.placeholder='';"
+                                    onblur="if(this.value === '') { this.placeholder = 'Enter your discount code'; }"></textarea>
+                                <button style="width: 100%;" id="applyDiscount" class="apply-btn">Apply</button>
+                                <p id="discountMessage" class="discount-message"></p>
+                            </div>
 
-                        </button>
+                            <div class="d-flex justify-content-between information">
+                                <span>Subtotal</span><span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between information" id="discount-row"
+                                style="display: none;">
+                                <span>Discount</span><span id="discount">$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between information">
+                                <span>Shipping</span><span>$20.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between information"><span>Total (Incl.
+                                    VAT)</span><span id="total">$20.00</span></div>
+                            <button type="button" onclick="location.href='payment.html'"
+                                class="btn btn-primary btn-block d-flex justify-content-center mt-3 checkout-button btn-flip"
+                                data-back="Checkout" data-front="">
+
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="removeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Are you sure you want to remove this item?</p>
+                    <div class="modal-buttons">
+                        <button id="confirmRemove" class="btn btn-danger">Remove</button>
+                        <button id="cancelRemove" class="btn btn-secondary">Cancel</button>
                     </div>
                 </div>
-
-
             </div>
-        </div>
-        <script src="/js/cart.js"></script>
-        <audio id="increase-sound" src="/fx/cashR.mp3" preload="auto"></audio>
-        <audio id="decrease-sound" src="/fx/sadA.mp3" preload="auto"></audio>
+
+            <script src="/js/cart.js"></script>
+            <audio id="increase-sound" src="/fx/cashR.mp3" preload="auto"></audio>
+            <audio id="decrease-sound" src="/fx/sadA.mp3" preload="auto"></audio>
     </main>
 
 </body>
@@ -223,7 +248,7 @@
             <ul>
                 <li>
                     <span><i class="fas fa-phone"></i></span>
-                    <p><a href="#">+0123456789</a></p>
+                    <p><a href="#">+84372868114</a></p>
                 </li>
                 <li>
                     <span><i class="fas fa-envelope"></i></span>

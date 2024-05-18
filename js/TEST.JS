@@ -90,7 +90,7 @@ document.querySelectorAll(".item").forEach(attachEventListeners);
 
 document.querySelectorAll(".remove").forEach((button) => {
   button.addEventListener("click", () => {
-    const itemElement = button.closest(".items");
+    const itemElement = button.closest(".item");
     itemElement.remove();
     calculateSubtotal();
   });
@@ -123,7 +123,7 @@ document.getElementById("cancelRemove").addEventListener("click", () => {
 
 document.getElementById("confirmRemove").addEventListener("click", () => {
   if (itemToRemove) {
-    itemToRemove.closest(".items").remove();
+    itemToRemove.remove();
     itemToRemove = null;
     calculateSubtotal();
   }
@@ -169,33 +169,3 @@ document
 
 // Initialize subtotal on page load
 calculateSubtotal();
-
-
-
-
-
-// document.querySelector(".close").addEventListener("click", () => {
-//   document.getElementById("removeModal").style.display = "none";
-//   itemToRemove = null;
-// });
-
-// document.getElementById("cancelRemove").addEventListener("click", () => {
-//   document.getElementById("removeModal").style.display = "none";
-//   itemToRemove = null;
-// });
-
-// document.getElementById("confirmRemove").addEventListener("click", () => {
-//   if (itemToRemove) {
-//     itemToRemove.closest(".items").remove();
-//     itemToRemove = null;
-//     calculateSubtotal();
-//   }
-//   document.getElementById("removeModal").style.display = "none";
-// });
-
-// window.onclick = function (event) {
-//   if (event.target == document.getElementById("removeModal")) {
-//     document.getElementById("removeModal").style.display = "none";
-//     itemToRemove = null;
-//   }
-// };

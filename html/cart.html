@@ -73,7 +73,8 @@
 								<div class="d-flex flex-row align-items-center ml-5">
 									<button
 										class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
-									<span class="d-block quantity">1</span>
+									<textarea rows="1" cols="1" class="d-block quantity" rows="1"
+										style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;">1</textarea>
 									<button
 										class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
 								</div>
@@ -98,7 +99,8 @@
 								<div class="d-flex flex-row align-items-center ml-5">
 									<button
 										class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
-									<span class="d-block quantity">1</span>
+									<textarea rows="1" cols="1" class="d-block quantity" rows="1"
+										style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;">1</textarea>
 									<button
 										class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
 								</div>
@@ -118,7 +120,8 @@
 								<div class="d-flex flex-row align-items-center ml-5">
 									<button
 										class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
-									<span class="d-block quantity">1</span>
+									<textarea rows="1" cols="1" class="d-block quantity" rows="1"
+										style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4;">1</textarea>
 									<button
 										class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
 								</div>
@@ -144,7 +147,8 @@
 								<div class="d-flex flex-row align-items-center ml-5">
 									<button
 										class="btn btn-secondary btn-sm mr-2 fa-solid fa-minus decrease-btn"></button>
-									<span class="d-block quantity">1</span>
+									<textarea rows="1" cols="1" class="d-block quantity" rows="1"
+										style="width: 100%; resize: none; border-radius: 7px; background-color: #e4e4e4; align-items: center;">1</textarea>
 									<button
 										class="btn btn-secondary btn-sm ml-2 fa-solid fa-plus increase-btn"></button>
 								</div>
@@ -184,6 +188,18 @@
 
 			</div>
 		</div>
+
+		<div id="removeModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Are you sure you want to remove this item?</p>
+				<div class="modal-buttons">
+					<button id="confirmRemove" class="btn btn-danger">Remove</button>
+					<button id="cancelRemove" class="btn btn-secondary">Cancel</button>
+				</div>
+			</div>
+		</div>
+
 		<script src="/js/cart.js"></script>
 		<audio id="increase-sound" src="/fx/cashR.mp3" preload="auto"></audio>
 		<audio id="decrease-sound" src="/fx/sadA.mp3" preload="auto"></audio>
@@ -223,7 +239,7 @@
 			<ul>
 				<li>
 					<span><i class="fas fa-phone"></i></span>
-					<p><a href="#">+0123456789</a></p>
+					<p><a href="#">+84372868114</a></p>
 				</li>
 				<li>
 					<span><i class="fas fa-envelope"></i></span>
