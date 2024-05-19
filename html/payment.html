@@ -1,83 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/png" href="../images/favicon.png">
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-		<title>E-Cart | Sàn thương mại điện tử số 1 VI </title>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<title>E-Cart | Sàn thương mại điện tử số 1 VI </title>
+</head>
+<body>
+<header>
+	<nav class="navbar">
+		<ul>
+			<li class="Logo"><a href="index.html"><img src="../images/favicon.png" alt="logo"></a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="product.html">Products</a></li>
+			<li><a href="cart.html">Your Cart</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+			<li><a href="sign.html">Sign In</a></li>
+		</ul>
+	</nav>
+</header>
 
-	<body>
-		<header>
-			<nav class="navbar">
-				<ul>
-					<li class="Logo"><a href="index.html"><img src="../images/favicon.png" alt="logo"></a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="product.html">Products</a></li>
-					<li><a href="cart.html">Your Cart</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-					<li><a href="sign.html">Sign In</a></li>
-				</ul>
-			</nav>
-		</header>
+<main>
+	<div class="container">
+		<form id="checkoutForm" action="">
+			<div class="row">
+				<div class="col">
+					<h3 class="title">billing address</h3>
 
-		<main>
-			
-		</main>
+					<div class="inputBox">
+						<span>full name :</span>
+						<input type="text" id="fullName">
+						<div id="fullNameError" class="error"></div>
+					</div>
+					<div class="inputBox">
+						<span>email :</span>
+						<input type="email" id="email" placeholder="example@example.com">
+						<div id="emailError" class="error"></div>
+					</div>
+					<div class="inputBox">
+						<span>address :</span>
+						<input type="text" id="address" placeholder="Room / Street / Locality">
+						<div id="addressError" class="error"></div>
+					</div>
+					<div class="inputBox">
+						<span>city :</span>
+						<input type="text" id="city">
+						<div id="cityError" class="error"></div>
+					</div>
 
-		<footer>
-			<div class="wrapper">
-				<div class="box info">
-					<h2 class="title">E-cart</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Consectetur dicta unde consequuntur maxime nobis officia nam earum, soluta a consequatur voluptate accusamus sapiente enim reprehenderit laboriosam, dolore veniam nulla. Illum.</p>
-					<ul class="icons">
-						<li>
-							<a href="#"><i class="fab fa-github"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-x-twitter"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-						</li>
-					</ul>
+					<div class="flex">
+						<div class="inputBox">
+							<span>country :</span>
+							<select id="country">
+								<option value="">Select a country</option>
+							</select>
+							<div id="countryError" class="error"></div>
+						</div>
+						<div class="inputBox">
+							<span>zip code :</span>
+							<input type="text" id="zipCode">
+							<div id="zipCodeError" class="error"></div>
+						</div>
+					</div>
 				</div>
-				<div class="box links">
-					<h2>Company</h2>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Our Teams</a></li>
-					<li><a href="#">Jobs</a></li>
-					<li><a href="#">Career</a></li>
-				</div>
-				<div class="box links">
-					<h2>Quick Links</h2>
-					<li><a href="#">Terms of Use</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Refund Policy</a></li>
-					<li><a href="#">Cookies Policy</a></li>
-				</div>
-				<div class="box contact">
-					<h2>Contact Us</h2>
-					<ul>
-						<li>
-							<span><i class="fas fa-phone"></i></span>
-							<p><a href="#">+0123456789</a></p>
-						</li>
-						<li>
-							<span><i class="fas fa-envelope"></i></span>
-							<p><a href="#">developmentteam@ecart.com</a></p>
-						</li>
-					</ul>
-				</div>
-				<div class="copyright">
-					Copyright &copy; E-cart. All Right Reserved.
+
+				<div class="col">
+					<h3 class="title">payment</h3>
+
+					<div class="inputBox">
+						<span>cards accepted :</span>
+						<img src="../images/credible_card.png" alt="">
+					</div>
+					<div class="inputBox">
+						<span>name on card :</span>
+						<input type="text" id="cardName">
+						<div id="cardNameError" class="error"></div>
+					</div>
+					<div class="inputBox">
+						<span>credit card number :</span>
+						<input type="number" id="cardNumber">
+						<div id="cardNumberError" class="error"></div>
+					</div>
+					<div class="inputBox">
+						<span>expire date :</span>
+						<input type="month" id="expDate">
+						<div id="expDateError" class="error"></div>
+					</div>
+
+					<div class="flex">
+						<div class="inputBox">
+							<span>Phone number :</span>
+							<input type="text" id="phoneNumber" maxlength="15">
+							<div id="phoneNumberError" class="error"></div>
+						</div>
+						<div class="inputBox">
+							<span>CVV :</span>
+							<input type="text" id="cvv" maxlength="4">
+							<div id="cvvError" class="error"></div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</footer>
-	</body> 
+
+			<input type="submit" value="proceed to checkout" class="submit-btn">
+			<div class="button-container">
+				<button onclick="window.location.href='cart.html'">Back to Cart</button>
+			</div>
+		</form>
+	</div>
+</main>
+
+<script>
+	// Populate countries dropdown
+	const countrySelect = document.getElementById('country');
+	fetch('https://restcountries.com/v3.1/all')
+			.then(response => response.json())
+			.then(data => {
+				const countries = data.map(country => ({
+					name: country.name.common,
+					code: country.cca2
+				})).sort((a, b) => a.name.localeCompare(b.name));
+				populateDropdown(countrySelect, countries, 'name', 'code');
+			})
+			.catch(error => console.error('Error fetching countries:', error));
+
+	function populateDropdown(selectElement, items, textKey, valueKey) {
+		items.forEach(item => {
+			const option = document.createElement('option');
+			option.textContent = item[textKey];
+			option.value = item[valueKey];
+			selectElement.appendChild(option);
+		});
+	}
+
+	// Form validation
+	document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+		event.preventDefault();
+		let isValid = true;
+
+		const fields = [
+			{ id: 'fullName', errorId: 'fullNameError', message: 'Full name is required' },
+			{ id: 'email', errorId: 'emailError', message: 'Email is required' },
+			{ id: 'address', errorId: 'addressError', message: 'Address is required' },
+			{ id: 'city', errorId: 'cityError', message: 'City is required' },
+			{ id: 'country', errorId: 'countryError', message: 'Country is required' },
+			{ id: 'zipCode', errorId: 'zipCodeError', message: 'Zip code is required' },
+			{ id: 'cardName', errorId: 'cardNameError', message: 'Name on card is required' },
+			{ id: 'cardNumber', errorId: 'cardNumberError', message: 'Credit card number is required' },
+			{ id: 'expDate', errorId: 'expDateError', message: 'Expiration date is required' },
+			{ id: 'phoneNumber', errorId: 'phoneNumberError', message: 'Phone number is required' },
+			{ id: 'cvv', errorId: 'cvvError', message: 'CVV is required' }
+		];
+
+		fields.forEach(field => {
+			const input = document.getElementById(field.id);
+			const errorElement = document.getElementById(field.errorId);
+			if (input.value.trim() === '') {
+				errorElement.textContent = field.message;
+				isValid = false;
+			} else {
+				errorElement.textContent = '';
+			}
+		});
+
+		// Custom validation for phone number and expiration date
+		const phoneNumber = document.getElementById('phoneNumber').value.trim();
+		const phoneNumberPattern = /^\+?[0-9]{10,15}$/;
+		if (!phoneNumberPattern.test(phoneNumber)) {
+			document.getElementById('phoneNumberError').textContent = 'Please enter a valid phone number';
+			isValid = false;
+		}
+
+		const expDate = document.getElementById('expDate').value;
+		if (new Date(expDate) <= new Date()) {
+			document.getElementById('expDateError').textContent = 'Expiration date must be in the future';
+			isValid = false;
+		}
+
+		if (isValid) {
+			window.location.href = 'success.html';
+		}
+	});
+</script>
+
+<footer>
+	<div class="wrapper">
+		<div class="box info">
+			<h2 class="title">E-cart</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Consectetur dicta unde consequuntur maxime nobis officia nam earum, soluta a consequatur voluptate accusamus sapiente enim reprehenderit laboriosam, dolore veniam nulla. Illum.</p>
+			<ul class="icons">
+				<li>
+					<a href="#"><i class="fab fa-github"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fab fa-x-twitter"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+				</li>
+			</ul>
+		</div>
+		<div class="box links">
+			<h2>Company</h2>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Our Teams</a></li>
+			<li><a href="#">Jobs</a></li>
+			<li><a href="#">Career</a></li>
+		</div>
+		<div class="box links">
+			<h2>Quick Links</h2>
+			<li><a href="#">Terms of Use</a></li>
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#">Refund Policy</a></li>
+			<li><a href="#">Cookies Policy</a></li>
+		</div>
+		<div class="box contact">
+			<h2>Contact Us</h2>
+			<ul>
+				<li>
+					<span><i class="fas fa-phone"></i></span>
+					<p><a href="#">+0123456789</a></p>
+				</li>
+				<li>
+					<span><i class="fas fa-envelope"></i></span>
+					<p><a href="#">developmentteam@ecart.com</a></p>
+				</li>
+			</ul>
+		</div>
+		<div class="copyright">
+			Copyright &copy; E-cart. All Right Reserved.
+		</div>
+	</div>
+</footer>
+</body>
 </html>
