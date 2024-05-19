@@ -1,3 +1,11 @@
+<?php 
+	include("../admin/config.php");
+	$sql_danhmuc = "SELECT * FROM category ORDER BY category_id DESC";
+	$query_danhmuc = mysqli_query($mysqli, $sql_danhmuc);
+
+	$sql_pro = "SELECT * FROM category,product WHERE product.category_id=category.category_id AND product.category_id='$_GET[id]' ORDER BY product.product_id DESC";
+	$query_pro = mysqli_query($mysqli, $sql_pro);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -14,21 +22,51 @@
 			<nav class="navbar">
 				<ul>
 					<li class="Logo"><a href="index.html"><img src="../images/favicon.png" alt="logo"></a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="product.html">Products</a></li>
-					<li><a href="cart.html">Your Cart</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
 					<li><a href="sign.html">Sign In</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="cart.html">Your Cart</a></li>
+					<li><a href="product.php">Products</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			
+			<div class="product_body_wrapper">
+				<div class="product_sidebar">
+					<ul class="category_list">
+						<?php 
+							while($row_danhmuc = mysqli_fetch_array($query_danhmuc)){
+						?>
+						<li><a href="product.php?action=danhmucsanpham&id=<?php echo $row_danhmuc['category_id'] ?>"><?php echo $row_danhmuc['category_name'] ?></a></li>
+						<?php
+						}
+						?>
+					</ul>
+				</div>
+
+				<div class="product_main_content">
+					<ul class="product_list">
+						<?php
+							while($row_pro = mysqli_fetch_array($query_pro)){  
+						?>
+						<li>
+							<img src="../images/admin_images/<?php echo $row_pro['product_image'] ?>">
+							<p class="product_name">Tên sản phẩm: <?php echo $row_pro['product_name'] ?></p>
+							<p class="product_price">Giá sản phẩm: <?php echo $row_pro['product_price'] ?></p>
+						</li>
+						<?php
+						} 
+						?>
+					</ul>
+				</div>
+
+				<div class="product_clear"></div>
+			</div>
 		</main>
 
 		<footer>
-			<div class="wrapper">
+			<div class="wrapper1">
 				<div class="box info">
 					<h2 class="title">E-cart</h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Consectetur dicta unde consequuntur maxime nobis officia nam earum, soluta a consequatur voluptate accusamus sapiente enim reprehenderit laboriosam, dolore veniam nulla. Illum.</p>

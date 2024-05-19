@@ -39,6 +39,84 @@ body {
 }
 /*Index Body*/
 
+/*Product Body*/
+.product_body_wrapper{
+	border: 2px solid #000;
+	border-radius: 10px;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.product_sidebar{
+	border: 1px solid #000;
+	height: 400px;
+	width: 20%;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+ul.category_list{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	border: 1px solid #;
+	list-style: none;
+	margin: 0 auto;
+	line-height: 27px;
+}
+
+ul.category_list li{
+	margin: 7px;
+	padding: 5px;
+}
+
+ul.category_list li a{
+	text-decoration: none;
+	text-align: left;
+	color: #000;
+	display: block;
+}
+
+ul.category_list li:hover{
+	background: cadetblue;
+}
+
+.product_main_content{
+	border: 1px solid #000;
+	height: auto;
+	width: 78%;
+	float: right;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+ul.product_list{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100%;
+}
+
+ul.product_list li{
+	width: 23.9%;
+	border: 1px solid #000;
+	margin: 5px;
+	float: left;
+}
+
+ul.product_list li img{
+	width: 100%;
+}
+
+.product_clear{
+	clear: both;
+}
+
+/*Product Body*/
+
 /*Footer*/
 footer{
 	border-radius: 10px;
@@ -60,18 +138,18 @@ footer{
 	padding: 40px 50px;
 }
 
-footer .wrapper{
+footer .wrapper1{
 	width: 100%;
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr 1fr;
 	gap: 20px;
 }
 
-.wrapper .box{
+.wrapper1 .box{
 	position: relative;
 }
 
-footer .wrapper .box h2{
+footer .wrapper1 .box h2{
 	position: relative;
 	color: #333;
 	font-size: 20px;
@@ -79,22 +157,22 @@ footer .wrapper .box h2{
 	margin-bottom: 15px;
 }
 
-footer .wrapper .box .title{
+footer .wrapper1 .box .title{
 	color: #333;
 }
 
-footer .wrapper .box p{
+footer .wrapper1 .box p{
 	font-size: 15px;
 }
 
-footer .wrapper .box .icons{
+footer .wrapper1 .box .icons{
 	list-style-type: none;
 	margin-top: 20px;
 	display: grid;
 	grid-template-columns: repeat(4, 50px);
 }
 
-footer .wrapper .box .icons a{
+footer .wrapper1 .box .icons a{
 	width: 36px;
 	height: 36px;
 	background: #333;
@@ -104,12 +182,12 @@ footer .wrapper .box .icons a{
 	text-decoration: none;
 }
 
-footer .wrapper .box .icons a i{
+footer .wrapper1 .box .icons a i{
 	font-size: 18px;
 	color: #fff;
 }
 
-footer .wrapper .links a{
+footer .wrapper1 .links a{
 	font-size: 15px;
 	color: white;
 	margin-bottom: 10px;
@@ -117,23 +195,23 @@ footer .wrapper .links a{
 	transition: 0.3s;
 }
 
-footer .wrapper .links a:hover, footer .wrapper .contact li a:hover{
+footer .wrapper1 .links a:hover, footer .wrapper .contact li a:hover{
 	color: darkgrey;
 }
 
-footer .wrapper .contact li{
+footer .wrapper1 .contact li{
 	display: grid;
 	grid-template-columns: 30px 1fr;
 	margin-bottom: 16px;
 	p ;
 }
 
-footer .wrapper .contact li span{
+footer .wrapper1 .contact li span{
 	font-size: 18px;
 	color: white;
 }
 
-footer .wrapper .contact li a{
+footer .wrapper1 .contact li a{
 	color: white;
 }
 
