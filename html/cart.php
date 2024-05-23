@@ -1,15 +1,7 @@
-<?php 
-	include("../admin/config.php");
-	$sql_danhmuc = "SELECT * FROM category ORDER BY category_id DESC";
-	$query_danhmuc = mysqli_query($mysqli, $sql_danhmuc);
-
-	$sql_pro = "SELECT * FROM product WHERE product.category_id='$_GET[id]' ORDER BY product.product_id DESC";
-	$query_pro = mysqli_query($mysqli, $sql_pro);
-
-	$sql_cate = "SELECT * FROM category WHERE category.category_id='$_GET[id]' LIMIT 1";
-	$query_cate = mysqli_query($mysqli,$sql_cate);
-	$row_title = mysqli_fetch_array($query_cate);
+<?php
+	session_start(); 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -41,53 +33,78 @@
 					<li><a href="about.html">About</a></li>
 					<li><a href="cart.php">Your Cart</a></li>
 					<li><a href="product.php">Products</a></li>
-					<li>
-						<p>
-							<form action="search.php" method="POST">
-								<input type="text" placeholder="Search..." name="keyword">
-								<input type="submit" name="search" value="Go">
-							</form>
-						</p>
-					</li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<div class="product_body_wrapper">
-				<div class="product_sidebar">
-					<ul class="category_list">
-						<?php 
-							while($row_danhmuc = mysqli_fetch_array($query_danhmuc)){
-						?>
-						<li><a href="product.php?action=danhmucsanpham&id=<?php echo $row_danhmuc['category_id'] ?>"><?php echo $row_danhmuc['category_name'] ?></a></li>
-						<?php
-						}
-						?>
-					</ul>
-				</div>
+			<p> Here is your cart: 
+				<?php
+					if(isset($_SESSION['user_name'])){
+						echo $_SESSION['user_name'];
+					} 
+				?>
+			</p>
 
-				<div class="product_main_content">
-					<h3>Loại sản phẩm: <?php echo $row_title['category_name'] ?></h3>
-					<ul class="product_list">
+			<table style="width: 100%;" border="1">
+				<tr>
+					<th>ID</th>
+					<th>Product Code</th>
+					<th>Product Name</th>
+					<th>Amount Ordered</th>
+					<th>Price per Unit</th>
+					<th>Final Price</th>
+					<th>Manager</th>
+				</tr>
+				<?php
+					if(isset($_SESSION['cart'])){
+						$i = 0;
+						$tongtien = 0;
+						foreach($_SESSION['cart'] as $cart_item){
+							$thanhtien = $cart_item['soluong']*$cart_item['giasp'];
+							$tongtien += $thanhtien;
+							$i++;
+				?>
+				<tr>
+					<td><?php echo $i; ?></td>
+					<td><?php echo $cart_item['masp']; ?></td>
+					<td><?php echo $cart_item['tensanpham']; ?></td>
+					<td><?php echo $cart_item['soluong']; ?></td>
+					<td><?php echo number_format($cart_item['giasp'],0,',','.').'đ'; ?></td>
+					<td><?php echo number_format($thanhtien,0,',','.').'đ'; ?></td>
+					<td><a href="add-to-cart.php?xoa=<?php echo $cart_item['id'] ?>">Delele</a></td>
+				</tr>
+				<?php
+					}
+				?>
+				<tr>
+					<td colspan="7">
+						<p>Subtotal: <?php echo number_format($tongtien,0,',','.').'đ'; ?></p>
+						<p><a href="add-to-cart.php?xoatatca=1">Delete All Products</a></p>
+						<div style="clear: both;"></div>
 						<?php
-							while($row_pro = mysqli_fetch_array($query_pro)){  
+						 	if(isset($_SESSION['user_name'])){
 						?>
-						<li>
-							<a href="product-details.php?action=sanpham&id=<?php echo $row_pro['product_id'] ?> ">
-								<img src="../images/admin_images/<?php echo $row_pro['product_image'] ?>">
-								<p class="product_name">Name: <?php echo $row_pro['product_name'] ?></p>
-								<p class="product_price">Price: <?php echo $row_pro['product_price'] ?></p>
-							</a>
-						</li>
+						 	<p><a href="#">Move to checkout</a></p>
 						<?php
-						} 
+							}else{ 
 						?>
-					</ul>
-				</div>
-
-				<div class="product_clear"></div>
-			</div>
+							<p><a href="sign.html">You need to sign in before checkout</a></p>
+						<?php
+							}  
+						?>
+					</td>
+				</tr>
+				<?php
+				} else {  
+				?>
+				<tr>
+					<td colspan="7"><p>Hiện tại giỏ hàng không có sản phẩm</p></td>
+				</tr>
+				<?php
+				}  
+				?>
+			</table>	
 		</main>
 
 		<footer>

@@ -3,12 +3,8 @@
 	$sql_danhmuc = "SELECT * FROM category ORDER BY category_id DESC";
 	$query_danhmuc = mysqli_query($mysqli, $sql_danhmuc);
 
-	$sql_pro = "SELECT * FROM product WHERE product.category_id='$_GET[id]' ORDER BY product.product_id DESC";
-	$query_pro = mysqli_query($mysqli, $sql_pro);
-
-	$sql_cate = "SELECT * FROM category WHERE category.category_id='$_GET[id]' LIMIT 1";
-	$query_cate = mysqli_query($mysqli,$sql_cate);
-	$row_title = mysqli_fetch_array($query_cate);
+	$sql_chitiet = "SELECT * FROM product,category WHERE product.category_id = category.category_id AND product.product_id = '$_GET[id]' LIMIT 1";
+	$query_chitiet = mysqli_query($mysqli,$sql_chitiet);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,26 +63,38 @@
 					</ul>
 				</div>
 
-				<div class="product_main_content">
-					<h3>Loại sản phẩm: <?php echo $row_title['category_name'] ?></h3>
-					<ul class="product_list">
-						<?php
-							while($row_pro = mysqli_fetch_array($query_pro)){  
-						?>
-						<li>
-							<a href="product-details.php?action=sanpham&id=<?php echo $row_pro['product_id'] ?> ">
-								<img src="../images/admin_images/<?php echo $row_pro['product_image'] ?>">
-								<p class="product_name">Name: <?php echo $row_pro['product_name'] ?></p>
-								<p class="product_price">Price: <?php echo $row_pro['product_price'] ?></p>
-							</a>
-						</li>
-						<?php
-						} 
-						?>
-					</ul>
+				<div class="product_details_main_content">
+					<?php
+						while($row_chitiet = mysqli_fetch_array($query_chitiet)){
+					?>
+					<div class="product_details_wrapper">
+						<div class="product_details_product_image">
+							<img width="80%" src="../images/admin_images/<?php echo $row_chitiet['product_image'] ?>">
+						</div>
+						<form action="add-to-cart.php?idsanpham=<?php echo $row_chitiet['product_id'] ?> " method="POST">
+							<div class="product_details_information">
+								<h3><?php echo $row_chitiet['product_name'] ?></h3>
+								<p>Giá sản phẩm: <?php echo $row_chitiet['product_price'] ?></p>
+								<p>Số lượng sản phẩm: <?php echo $row_chitiet['amount'] ?></p>
+								<p>Thể loại: <?php echo $row_chitiet['category_name'] ?></p>
+								<p>Tình trạng: <?php if($row_chitiet['status'] == 0) {
+									                echo 'Mới';
+									            } else {
+									                echo 'Đã qua sử dụng';
+									            }
+									            ?>
+								</p>
+								<p>Đánh giá chung: <?php echo $row_chitiet['noidung'] ?></p>
+								<p><input class="add_to_cart" name="add-to-cart" type="submit" value="Thêm vào giỏ hàng"></p>
+							</div>
+						</form>
+					</div>
+					<?php
+					} 
+					?>
 				</div>
 
-				<div class="product_clear"></div>
+				<div class="product_details_clear"></div>
 			</div>
 		</main>
 

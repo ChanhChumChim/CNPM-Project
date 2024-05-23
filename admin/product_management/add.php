@@ -49,8 +49,8 @@
             <td>Status</td>
             <td>
                 <select name="tinhtrang">
-                    <option value="1">Kích hoạt</option>
-                    <option value="0">Ẩn</option>
+                    <option value="0">Mới</option>
+                    <option value="1">Đã qua sử dụng</option>
                 </select>
             </td>
         </tr>

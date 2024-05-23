@@ -25,17 +25,67 @@
 
 .navbar li{
 	float: right;
+	height: 50px;
 }
 
-.navbar li.Logo {
+.navbar li.Logo{
+	border: 1px;
 	float: left;
+	height: 50px;
+	padding-bottom: 10px;
 }
+
 /*Header*/
 
 /*Index Body*/
 body {
 	background-color: #c9d6ff;
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+.index_body_wrapper{
+	border: 2px solid #000;
+	border-radius: 10px;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+ul.index_product_list{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100%;
+}
+
+ul.index_product_list li{
+	height: auto;
+	width: 13.9%;
+	border: 3px solid #000;
+	border-radius: 5px;
+	margin: 5px;
+	float: left;
+}
+
+ul.index_product_list li a{
+	text-decoration: none;
+	color: #000;
+}
+
+ul.index_product_list li a p.product_name{
+	max-width: 90%;
+	max-height: 35px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+ul.index_product_list li img{
+	width: 100%;
+}
+
+.index_clear{
+	clear: both;
 }
 /*Index Body*/
 
@@ -51,7 +101,7 @@ body {
 
 .product_sidebar{
 	border: 1px solid #000;
-	height: 400px;
+	height: auto;
 	width: 20%;
 	float: left;
 	margin-top: 5px;
@@ -85,7 +135,6 @@ ul.category_list li:hover{
 }
 
 .product_main_content{
-	border: 1px solid #000;
 	height: auto;
 	width: 78%;
 	float: right;
@@ -102,9 +151,13 @@ ul.product_list{
 
 ul.product_list li{
 	width: 23.9%;
-	border: 1px solid #000;
+	border: 3px solid #000;
 	margin: 5px;
 	float: left;
+}
+
+ul.product_list li a{
+	text-decoration: none;
 }
 
 ul.product_list li img{
@@ -116,6 +169,46 @@ ul.product_list li img{
 }
 
 /*Product Body*/
+
+/*Product Details Body*/
+
+.product_details_main_content{
+	height: auto;
+	width: 78%;
+	float: right;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.product_details_wrapper{
+	height: auto;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.product_details_product_image{
+	width: 48%;
+	float: left;
+}
+
+.product_details_information{
+	float: left;
+	width: 40%;
+}
+
+.add_to_cart{
+	background: brown;
+	color: #fff;
+	padding: 12px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.product_details_clear{
+	clear: both;
+}
+
+/*Product Details Body*/
 
 /*Footer*/
 footer{

@@ -30,10 +30,10 @@
         <td><?php echo $row['category_name'] ?></td>
         <td><?php echo $row['product_code'] ?></td>
         <td><?php echo $row['tomtat'] ?></td>
-        <td><?php if($row['status'] == 1) {
-                echo 'Kích hoạt';
+        <td><?php if($row['status'] == 0) {
+                echo 'Mới';
             } else {
-                echo 'Ẩn';
+                echo 'Đã qua sử dụng';
             }
             ?>
         </td>
