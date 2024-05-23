@@ -14,6 +14,7 @@
     }
 
     if($sql_dangky) {
+        $_SESSION['signup'] = $tenkhachhang;
         header("Location: ../html/sign.html");
         exit();
     }

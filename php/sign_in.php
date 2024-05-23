@@ -3,7 +3,6 @@
     include('../admin/config.php');
 
     if (isset($_POST['dangnhap'])) {
-        $tenkhachhang = $_POST['user_name'];
         $email = $_POST['email'];
         $password = md5($_POST['password']);
 
@@ -17,7 +16,6 @@
                 $row = mysqli_fetch_assoc($result);
                 $_SESSION['user_id'] = $row['user_id'];
                 $_SESSION['user_name'] = $row['user_name'];
-                $_SESSION['signin'] = $tenkhachhang;
                 echo "<script>alert('Signed In Successfully');</script>";
                 // Chuyển hướng đến trang chính sau khi đăng nhập thành công
                 header("Location: ../html/index.php");

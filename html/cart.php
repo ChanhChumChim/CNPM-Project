@@ -46,7 +46,11 @@
 				?>
 			</p>
 
-			<table style="width: 100%;" border="1">
+			<button style="margin-bottom: 10px;">
+				<a href="product.php">Back to products page</a>
+			</button>
+
+			<table style="width: 100%; text-align: center;" border="1">
 				<tr>
 					<th>ID</th>
 					<th>Product Code</th>
@@ -85,7 +89,7 @@
 						<?php
 						 	if(isset($_SESSION['user_name'])){
 						?>
-						 	<p><a href="#">Move to checkout</a></p>
+						 	<p><a href="checkout.php">Checkout your Cart here</a></p>
 						<?php
 							}else{ 
 						?>

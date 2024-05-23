@@ -57,6 +57,9 @@
 	            <tr>
 	                <td colspan="2"><input type="submit" name="dangnhap" value="Đăng nhập"></td>
 	            </tr>
+	            <tr>
+	                <td colspan="2"><a href="../html/sign.html">Login as User</a></td>
+	            </tr>
 	        </table>
 	    </form>
 	</div>

@@ -1,4 +1,5 @@
-<?php 
+<?php
+	session_start();
 	include("../admin/config.php");
 	$sql_danhmuc = "SELECT * FROM category ORDER BY category_id DESC";
 	$query_danhmuc = mysqli_query($mysqli, $sql_danhmuc);
