@@ -34,12 +34,11 @@
 						}  
 					?>
 					<li><a href="contact.html">Contact Us</a></li>
-					<li><a href="about.html">About</a></li>
 					<li><a href="cart.php">Your Cart</a></li>
 					<li><a href="product.php">Products</a></li>
 					<li>
 						<p>
-							<form action="search.php" method="POST">
+							<form class="search_bar" action="search.php" method="POST">
 								<input type="text" placeholder="Search..." name="keyword">
 								<input type="submit" name="search" value="Go">
 							</form>

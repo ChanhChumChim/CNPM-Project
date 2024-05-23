@@ -17,5 +17,6 @@
 		}
 	}
 	unset($_SESSION['cart']);
-	header('Location: cart.php');
+
+	header('Location: payment.php');
 ?>

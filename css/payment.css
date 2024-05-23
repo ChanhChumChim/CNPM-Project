@@ -43,6 +43,165 @@ body {
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
 }
 
+ .inputBox {
+	 margin-bottom: 15px;
+ }
+.inputBox span {
+	display: block;
+	margin-bottom: 5px;
+}
+.error {
+	color: red;
+	font-size: 0.9em;
+}
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin:0; padding:0;
+	box-sizing: border-box;
+	outline: none; border:none;
+	text-transform: capitalize;
+	transition: all .2s linear;
+}
+
+.check-mark {
+	width: 100px;
+	height: auto;
+	color: chocolate;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:25px;
+	min-height: 100vh;
+}
+
+.success_container {
+	text-align: center;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.button-group button {
+	padding: 10px 20px;
+	cursor: pointer;
+	background-color: chocolate;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	margin: 4px;
+}
+
+.button-group button:hover {
+	background-color: black;
+}
+
+.button-container {
+	text-align: center;
+	margin-top: 20px; /* Add margin for spacing */
+}
+
+.button-container button {
+	background: none;
+	border: none;
+	color: chocolate; /* Change color to blue */
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.container form{
+	padding:20px;
+	width:700px;
+	background: #fff;
+	border-radius: 7px;
+	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+	display: flex;
+	flex-wrap: wrap;
+	gap:15px;
+}
+
+.container form .row .col{
+	flex:1 1 250px;
+}
+
+.container form .row .col .title{
+	font-size: 20px;
+	color:#333;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+	margin:15px 0;
+}
+
+.container form .row .col .inputBox select {
+	width: 150px;
+	height: 45px;
+	font-size: 14px;
+	padding: 5px;
+	border:1px solid #ccc;
+}
+
+.container form .row .col .inputBox span{
+	margin-bottom: 10px;
+	display: block;
+	color: black;
+}
+
+.container form .row .col .inputBox input{
+	width: 100%;
+	border:1px solid #ccc;
+	padding:10px 15px;
+	font-size: 15px;
+	text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+	border:1px solid #000;
+}
+
+.container form .row .col .flex{
+	display: flex;
+	gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+	margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+	height: 31px;
+	margin-top: 5px;
+	filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+	width: 100%;
+	padding:12px;
+	font-size: 17px;
+	background: chocolate;
+	color:#fff;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+	background: black;
+
 .index_body_wrapper{
 	border: 2px solid #000;
 	border-radius: 10px;
